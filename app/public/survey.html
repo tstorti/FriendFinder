@@ -3,156 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <title>Friend Finder</title>
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="app/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="app/css/style.css">
 </head>
 <body>
     <!-- Page Container -->
-	<div class="container">
+	<div class="page-container">
         
-        <div class="h3">Survey Questions</div>
+        <div class="page-header">Survey Questions</div>
         
         <!-- User Input fields -->
-        <div class="container">
-            <div class="h4">About You</div>
-            <div class ="h5">Name (Required)</div>
-            <input type="text" name="" id="name">
+        <div class="inputs-section">
+            <div class="question-header">About You</div>
+            <div class ="question-text">Name (Required)</div>
+            <input class="text-input" type="text" id="name">
 
-            <div class="h5">Link to Photo Image (Required)</div>
-            <input type="text" name="" id="photo">
+            <div class="question-text">Link to Photo Image (Required)</div>
+            <input class="text-input" type="text" id="photo">
         </div>
         
         <!-- Dropdown Questions Section -->
-        <div class="container">
-            <div>Question 1</div>
-            <div>Your mind is always buzzing with unexplored ideas and plans.</div>
-            <select id="q1">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+        <div class="questions-section">
+            <div class="question-container">
+                <div class="question-header">Question 1</div>
+                <div class="question-text">Your mind is always buzzing with unexplored ideas and plans.</div>
+                <select class="dropdown" id="q1">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
 
-            <div>Question 2</div>
-            <div>Generally speaking, you rely more on your experience than your imagination.</div>
-            <select id="q2">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="question-container">
+                <div class="question-header">Question 2</div>
+                <div class="question-text">Generally speaking, you rely more on your experience than your imagination.</div>
+                <select class="dropdown" id="q2">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
 
-            <div>Question 3</div>
-            <div>You find it easy to stay relaxed and focused even when there is some pressure.</div>
-            <select id="q3">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="question-container">
+                <div class="question-header">Question 3</div>
+                <div class="question-text">You find it easy to stay relaxed and focused even when there is some pressure.</div>
+                <select class="dropdown" id="q3">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
 
-            <div>Question 4</div>
-            <div>You rarely do something just out of sheer curiosity.</div>
-            <select id="q4">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="question-container">
+                <div class="question-header">Question 4</div>
+                <div class="question-text">You rarely do something just out of sheer curiosity.</div>
+                <select class="dropdown" id="q4">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
 
-            <div>Question 5</div>
-            <div>People can rarely upset you.</div>
-            <select id="q5">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="question-container">
+                <div class="question-header">Question 5</div>
+                <div class="question-text">People can rarely upset you.</div>
+                <select class="dropdown" id="q5">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
 
-            <div>Question 6</div>
-            <div>It is often difficult for you to relate to other people’s feelings.</div>
-            <select id="q6">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="question-container">
+                <div class="question-header">Question 6</div>
+                <div class="question-text">It is often difficult for you to relate to other people’s feelings.</div>
+                <select class="dropdown" id="q6">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
 
-            <div>Question 7</div>
-            <div>In a discussion, truth should be more important than people’s sensitivities.</div>
-            <select id="q7">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+            <div class="question-container">
+                <div class="question-header">Question 7</div>
+                <div class="question-text">In a discussion, truth should be more important than people’s sensitivities.</div>
+                <select class="dropdown" id="q7">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
             </select>
+            </div>
 
-            <div>Question 8</div>
-            <div>You rarely get carried away by fantasies and ideas.</div>
-            <select id="q8">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="question-container">
+                <div class="question-header">Question 8</div>
+                <div class="question-text">You rarely get carried away by fantasies and ideas.</div>
+                <select class="dropdown" id="q8">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
 
-            <div>Question 9</div>
-            <div>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</div>
-            <select id="q9">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="question-container">
+                <div class="question-header">Question 9</div>
+                <div class="question-text">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</div>
+                <select class="dropdown" id="q9">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
 
-            <div>Question 10</div>
-            <div>You feel more energetic after spending time with a group of people.</div>
-            <select id="q10">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="question-container">
+                <div class="question-header">Question 10</div>
+                <div class="question-text">You feel more energetic after spending time with a group of people.</div>
+                <select class="dropdown" id="q10">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
         </div>
 
         <!-- Submit Button -->
         <div>
-            <button type="submit" class="btn" id="submit">Submit</button>
+            <button type="submit" class="btn-submit" id="submit">Submit</button>
         <div>
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="container">
+            <div >
                 <div><a href="/api/friends">API Friends List</a> | <a href="https://github.com/tstorti/FriendFinder">GitHub Repo</a></div>
             </div>
         </footer>
 
-        <!-- Modal: TODO -->
+    </div>
     
-	</div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+            <button class="close">x</button>
+            <div>
+                <div class="friend-header">Your new friend is:</div>
+                <div class="friend-name" id="friendName"></div>
+            </div>
+            <div>
+                <img class="friend-picture" id="friendPicture">
+            </div>
+        </div>
+
+    </div>
 	
     <script  type="text/javascript" src="app/logic/logic.js"></script>
 </body>

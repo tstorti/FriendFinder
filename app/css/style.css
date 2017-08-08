@@ -1,0 +1,158 @@
+body{
+    background-color:#BED5DB;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.35;
+}
+
+.btn-submit{
+    padding:20px;
+    background-color: #CF9256;
+    border:2px solid #377280;
+    border-radius:4px;
+    color: black;
+    margin-left:100px;
+    width:200px;
+}
+
+.btn-submit:hover{
+    background-color: #8F4C0D;
+    color: white;
+}
+
+.btn-survey{
+    padding:20px;
+    background-color: #CF9256;
+    border:2px solid #377280;
+    border-radius:4px;
+    color: black;
+    margin-left:100px;
+    width:200px;
+}
+
+.btn-survey:hover{
+    background-color: #8F4C0D;
+    color: white;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.dropdown{
+    margin-left:10px;
+}
+
+.footer{
+    margin-top:20px;
+    margin-left:98px;
+}
+
+.friend-header{
+    padding:10px;
+    font-size:20px;
+}
+
+.friend-name{
+    padding-left:10px;
+    font-size:20px;
+}
+
+.friend-picture{
+    padding:20px;
+    width:300px;
+}
+
+.home-description{
+    font-size:20px;
+}
+
+.home-panel{
+    padding:20px;
+    margin:10px;
+    border:2px solid #377280;
+    background-color: #97BBC3;
+    border-radius:4px;
+}
+
+.inputs-section{
+    padding:10px;
+    margin:10px;
+    border:2px solid #377280;
+    background-color: #97BBC3;
+    border-radius:4px;
+    width:360px
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.page-container{
+    padding:10px;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.page-header{
+    font-size:30px;
+    margin:10px;
+}
+
+.question-container{
+    padding:10px;
+    border:2px solid #377280;
+    border-radius:4px;
+    background-color: #97BBC3;
+    margin:10px;
+    width:360px;
+}
+
+.question-header{
+    font-size:20px;
+}
+
+.questions-section{
+    margin-top:20px;
+}
+
+.question-text{
+    margin: 10px;
+}
+
+.text-input{
+    margin-left:10px;
+    width:80%;
+}
+
+
+

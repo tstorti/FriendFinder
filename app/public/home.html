@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Friend Finder</title>
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="app/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="app/css/style.css">
 
 </head>
 <body>
-
-	<div class="container">
+	
+	<div class="page-container">
 		
-		<div class="jumbotron">
-			<div class="h2"> Friend Finder</div>
-			<div class="h4">Answer a few basic questions. </div>
-			<div class="h4">Then find the friend with the greatest compatibility!</div>
-			<div>
-				<a href="/survey"><button class="btn btn-primary">Go to Survey</button></a>	
-			</div>
+		<div class="page-header"> Friend Finder</div>
+		
+		<div class="home-panel">
+			<div class="home-description">Answer a few basic questions, then find the friend with the greatest compatibility!</div>
+		</div>
+		
+		<div>
+			<a href="/survey"><button class="btn-survey">Go to Survey</button></a>	
 		</div>
 
 	    <footer class="footer">
-	      <div class="container">
-		        <div><a href="/api/friends">API Friends List</a> | <a href="https://github.com/tstorti/FriendFinder">GitHub Repo</a></div>
-	      </div>
+			<div>
+				<div><a href="/api/friends">API Friends List</a> | <a href="https://github.com/tstorti/FriendFinder">GitHub Repo</a></div>
+			</div>
 	    </footer>
 
 	</div>

@@ -1,17 +1,4 @@
 
-
-console.log("running page logic");
-
-// Capture the form inputs 
-$("#submit").on("click", function(){
-    if(validate()){
-        setUserInputs();
-    }
-    else{
-        //give warning message
-    }
-});
-
 function validate(){
     return true;
 };
@@ -31,10 +18,26 @@ function setUserInputs(){
     $.post(currentURL + "/api/friends", userInputs, function(data){
 
         // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-        console.log(data);
-        // Show the new friend modal 
+        $("#friendName").text(data.name);
+        $("#friendPicture").attr("src", data.photo);
 
+        //show modal
+        $("#modal").attr("style", "display:block");
     });
 };
 
+// Capture the form inputs 
+$("#submit").on("click", function(){
+    if(validate()){
+        setUserInputs();
+    }
+    else{
+        //give warning message
+    }
+});
+
+// When the user clicks on close (x), close the modal
+$(".close").on("click", function() {
+    $("#modal").attr("style", "display:none");
+});
 

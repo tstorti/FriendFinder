@@ -12,21 +12,24 @@ module.exports = function(app) {
 
 //    * A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic. 
     app.post("/api/friends", function(req, res) {
-       
-        var userData = req.body;
+        res.json(findFriend(req.body));  
+    });
+
+    //function to calculate friend based on a new
+    function findFriend(userData){
         var matchedFriendScore = 100000;
         var matchedFriend = null;
         
         //converting user data scores to integers
-        for(var i=0;i<req.body.scores.length;i++){
-            userData.scores[i]=parseInt(req.body.scores[i]);
+        for(var i=0;i<userData.scores.length;i++){
+            userData.scores[i]=parseInt(userData.scores[i]);
         }
 
-//    Compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the `totalDifference`.
-//      * Example: 
-//        * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
-//        * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
-//        * Total Difference: **2 + 1 + 2 =** **_5_**
+        //    Compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the `totalDifference`.
+        //      * Example: 
+        //        * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
+        //        * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
+        //        * Total Difference: **2 + 1 + 2 =** **_5_**
 
         //compare user data to other friends in friend array
         for (var i=0;i<friendData.length;i++){
@@ -45,13 +48,13 @@ module.exports = function(app) {
                 matchedFriend = friendData[i];
             }
         }
-        //return object of matched friend.
-        res.json(matchedFriend); 
-        
-        //add user to the friends DB so they are available for new searches
+        //add user to the friendData array so they are available for new searches
+        //future implementation of this should store data in database.
         friendData.push(userData);
-       
-    });
+
+        //return object of matched friend.
+        return(matchedFriend);         
+    };
 
 };
 
