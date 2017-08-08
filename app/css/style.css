@@ -113,7 +113,7 @@ body{
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 400px;
 }
 
 .page-container{
@@ -152,6 +152,12 @@ body{
 .text-input{
     margin-left:10px;
     width:80%;
+}
+
+.warning{
+    color:red;
+    font-weight:bold;
+    padding:10px;
 }
 
 

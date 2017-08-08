@@ -1,8 +1,4 @@
 
-function validate(){
-    return true;
-};
-
 function setUserInputs(){
     // Create an object for the user data
     var userInputs = {
@@ -26,6 +22,16 @@ function setUserInputs(){
     });
 };
 
+function validate(){
+    //make sure all input fields have a value
+    if($("#q1").val() !== "" && $("#q2").val() !== "" && $("#q3").val() !== "" && $("#q4").val() !== "" && $("#q5").val() !== "" && $("#q6").val() !== "" && $("#q7").val() !== "" && $("#q8").val() !== "" && $("#q9").val() !== "" && $("#q10").val() !== "" && $("#name").val() !== "" && $("#photo").val() !== ""){
+        return true;
+    }
+    else{
+        return false;
+    }
+};
+
 // Capture the form inputs 
 $("#submit").on("click", function(){
     if(validate()){
@@ -33,6 +39,7 @@ $("#submit").on("click", function(){
     }
     else{
         //give warning message
+        $("#warning").text("You must answer all questions to continue");
     }
 });
 
