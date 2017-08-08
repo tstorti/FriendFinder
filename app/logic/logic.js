@@ -34,6 +34,9 @@ function validate(){
 
 // Capture the form inputs 
 $("#submit").on("click", function(){
+    //clear any current warning messages
+    $("#warning").text("");
+    
     if(validate()){
         setUserInputs();
     }
